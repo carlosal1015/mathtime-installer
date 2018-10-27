@@ -217,18 +217,18 @@ install_mtpro2 () {
 
 	echo "------------------------[ OUTPUT OF: texhash ]---------------------------------------------" >> $LOGFILE
 	echo "  > running texhash"
-	sudo texhash >> $LOGFILE 2>&1
+	texhash >> $LOGFILE 2>&1
 	echo "------------------------[ OUTPUT OF: updmap-sys --disable mt-belleek.map --nomkmap ]-------" >> $LOGFILE
 	echo "  > updating map references"
-	sudo updmap-sys --disable mt-belleek.map --nomkmap >> $LOGFILE 2>&1
+	updmap-sys --disable mt-belleek.map --nomkmap >> $LOGFILE 2>&1
 	echo "------------------------[ OUTPUT OF: updmap-sys --disable mt-belleek.map --nomkmap ]-------" >> $LOGFILE
-	sudo updmap-sys --disable belleek.map --nomkmap >> $LOGFILE 2>&1
+	updmap-sys --disable belleek.map --nomkmap >> $LOGFILE 2>&1
 	echo "------------------------[ OUTPUT OF: updmap-sys --disable mt-yy.map --nomkmap ]------------" >> $LOGFILE
-	sudo updmap-sys --disable mt-yy.map --nomkmap >> $LOGFILE 2>&1
+	updmap-sys --disable mt-yy.map --nomkmap >> $LOGFILE 2>&1
 	echo "------------------------[ OUTPUT OF: updmap-sys --disable mt-plus.map --nomkmap ]----------" >> $LOGFILE
-	sudo updmap-sys --disable mt-plus.map --nomkmap >> $LOGFILE 2>&1
+	updmap-sys --disable mt-plus.map --nomkmap >> $LOGFILE 2>&1
 	echo "------------------------[ OUTPUT OF: updmap-sys --enable Map mtpro2.map ]------------------" >> $LOGFILE
-	sudo updmap-sys --enable Map mtpro2.map >> $LOGFILE 2>&1
+	updmap-sys --enable Map mtpro2.map >> $LOGFILE 2>&1
 	echo "-------------------------------------------------------------------------------------------" >> $LOGFILE
 	sudo chmod -R a+r+x ${TEXMF}/
 	#OLD: sudo chmod -R a+r+x /usr/local/share/texmf/
