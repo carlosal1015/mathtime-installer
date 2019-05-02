@@ -302,7 +302,7 @@ while getopts ":i:hut" o; do
 
 			echo "Succesfully compiled LaTeX file with MTPro2 included."
 			echo "MathTime Professional 2 installed."
-			echo "Documentation available at ${TEXMF}/docs/"
+			echo "Documentation available at ${TEXMF}/doc/"
 
 			exit;
 			;;
